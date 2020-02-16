@@ -1,0 +1,25 @@
+:root {
+  background-color: #282c34;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  color: #7d70ba;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.App {
+  background-color: #282c34;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  color: #7d70ba;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.App-link {
+  color: #33658a;
+}
