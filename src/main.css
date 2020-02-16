@@ -1,5 +1,5 @@
 :root {
-  --background: #f8ffe5;
+  --background: #221912;
   --textPrimary: #1b9aaa;
   --textSecondary: #ef476f;
   background-color: var(--background);
@@ -44,7 +44,8 @@
 .action-button {
   background-color: var(--textPrimary);
   border: none;
-  color: var(--textSecondary);
+  color: var(--background);
+  font-weight: bold;
   padding: 0.5rem 1rem;
   min-width: 5rem;
   text-align: center;
@@ -62,6 +63,14 @@
   border: none;
   border-bottom: 2px solid var(--textPrimary);
   color: var(--textPrimary);
+  margin-right: 1rem;
+}
+
+.task-text {
   flex-grow: 1;
+}
+
+.task-deadline {
+  width: 9rem;
   margin-right: 1rem;
 }

@@ -15,16 +15,21 @@
     <div class="App-Container">
       <h1>TODO APP</h1>
       <section class="list-section">
-        <label for="new-task"
-          ><h2 class="section-title">Add New Task</h2></label
-        >
+        <h2 class="section-title">Add New Task</h2>
         <div class="task-element">
-          <input class="task-input" id="new-task" type="text" />
+          <label class="task-label" for="new-task-text">Task Text</label>
+          <input class="task-input task-text" id="new-task-text" type="text" />
+          <label class="task-label" for="new-task-deadline">Task Text</label>
+          <input
+            class="task-input task-deadline"
+            id="new-task-deadline"
+            type="date"
+          />
           <button class="action-button" id="add-new-button">Add</button>
         </div>
       </section>
       <section class="list-section">
-        <h2 class="section-title">List</h2>
+        <h2 class="section-title">Tasks</h2>
         <ul class="todo-list" id="task-list"></ul>
       </section>
     </div>

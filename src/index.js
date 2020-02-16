@@ -1,12 +1,14 @@
 console.info('Loading...')
 
-let taskInput, addButton, taskList
+let taskInput, addButton, taskList, taskDeadLine
 
-const createNewTaskElement = function(taskString) {
+const createNewTaskElement = function(taskString, taskDeadLine) {
   let newTask = document.createElement('li')
   let label = document.createElement('label')
   let editInput = document.createElement('input')
   let deleteButton = document.createElement('button')
+  let deadLineLabel = document.createElement('label')
+  let deadLineInput = document.createElement('input')
 
   newTask.className = 'task-element'
 
@@ -15,13 +17,19 @@ const createNewTaskElement = function(taskString) {
 
   editInput.type = 'text'
   editInput.value = taskString
-  editInput.className = 'task-input'
+  editInput.className = 'task-input task-text'
 
   deleteButton.innerText = 'Delete'
   deleteButton.className = 'action-button'
 
+  deadLineInput.type = 'date'
+  deadLineInput.className = 'task-input task-deadline'
+  deadLineInput.value = taskDeadLine
+
   newTask.appendChild(label)
   newTask.appendChild(editInput)
+  newTask.appendChild(deadLineLabel)
+  newTask.appendChild(deadLineInput)
   newTask.appendChild(deleteButton)
 
   return newTask
@@ -39,9 +47,8 @@ const bindToList = task => {
 }
 
 const addNewTask = () => {
-  const listItem = createNewTaskElement(taskInput.value)
+  const listItem = createNewTaskElement(taskInput.value, taskDeadLine.value)
   taskList.appendChild(listItem)
-  taskInput.value = ''
   bindToList(listItem, listItem)
 }
 
@@ -49,7 +56,10 @@ const addNewTask = () => {
 const initModule = () => {
   taskList = document.getElementById('task-list')
   addButton = document.getElementById('add-new-button')
-  taskInput = document.getElementById('new-task') // new-task
+  taskInput = document.getElementById('new-task-text')
+  taskDeadLine = document.getElementById('new-task-deadline')
+  let today = new Date().toISOString().substr(0, 10)
+  taskDeadLine.value = today
   addButton.addEventListener('click', addNewTask)
 }
 
