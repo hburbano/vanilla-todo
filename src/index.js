@@ -8,7 +8,7 @@ const createNewTaskElement = function(taskString) {
   let editInput = document.createElement('input')
   let deleteButton = document.createElement('button')
 
-  newTask.className = 'task-list-item'
+  newTask.className = 'task-element'
 
   label.innerText = taskString
   label.className = 'task-label'

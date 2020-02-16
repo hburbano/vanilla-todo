@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Todo APP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <h1>TODO APP</h1>
+    <div class="App-Container">
+      <h1>TODO APP</h1>
+      <section class="list-section">
+        <label for="new-task"
+          ><h2 class="section-title">Add New Task</h2></label
+        >
+        <div class="task-element">
+          <input class="task-input" id="new-task" type="text" />
+          <button class="action-button" id="add-new-button">Add</button>
+        </div>
+      </section>
+      <section class="list-section">
+        <h2 class="section-title">List</h2>
+        <ul class="todo-list" id="task-list"></ul>
+      </section>
+    </div>
   </body>
   <footer>
     Source at
@@ -17,4 +35,5 @@
       >Github</a
     >
   </footer>
+  <script type="module" src="./index.js"></script>
 </html>
